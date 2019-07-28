@@ -89,3 +89,14 @@ img {
   background: #007bb5;
   color: white;
 }
+.new-pizza-size {
+  width: 50%;
+}
+
+#show-pizza-results {
+  display: none;
+}
+
+li {
+  font-size: 30px;
+}
