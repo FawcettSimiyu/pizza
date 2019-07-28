@@ -13,5 +13,76 @@
     <script src="js/jquery-3.4.1.js" charset="utf-8"></script>
     <script src="js/main.js" charset="utf-8"></script>
   </head>
-  
+  <body>
+    <div class="container-fluid">
+      <div class="banhead1">
+        <div class="logo">
+          <img src="images/logo1.jpg" alt="logo Image" width="150">
+        </div>
+        <h3>Moi Avenue Street, Nairobi Kenya</h3>
+        <h4>+(254)(020)704122060</h4>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title text-center">
+        <h4>Place Your Order Here</h4>
+        <p>We know that everyone has thier own Pizza preferences. Order your special pizza by choosing from the ingredients below.</p>
+      </div>
+      <div class="card-body">
+        <form id="orders">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="quantity">Enter Pizza Quantity</label>
+                <input class="form-control"type="number" id="quantity">
+              </div>
+              <div class="col-md-4">
+                <label for="size">Select Pizza Size</label>
+                <select id="pizza-size" class="mdb-select md-form">
+                  <option value="regular">Regular</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="crust">Select Pizza Crust</label>
+                <select class="mdb-select md-form" id="pizza-crust">
+                  <option class="form-control" value="thin">Thin Crust</option>
+                  <option class="form-control" value="thick">Thick Crust</option>
+                  <option class="form-control" value="pan">Pan Crust</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="toppings">Select Pizza Toppings</label>
+                <select class="mdb-select md-form" id="pizza-topping">
+                  <option value="margherita">Margherita Pizza</option>
+                  <option value="pepperoni">Pepperoni Pizza</option>
+                  <option value="bbq">BBQ Chicken Pizza</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="deliver">Do you Need Your Pizza Delivered?</label>
+                <select class="mdb-select md-form" id="deliver">
+                  <option value="yes">Yes, Please</option>
+                  <option value="no">No, Please</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <button type="submit" id="btn">Checkout Now</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.4.1.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+  </body>
 </html>
