@@ -23,14 +23,14 @@ Pizza.prototype.costOfToppings = function (chosen, toppings) {
 Pizza.prototype.costOfCrust = function (chosen1, crust){
   for (i=0; i<this.chosenCrusts.length; i +=1){
     if (this.chosenCrusts[i].checked){
-      this.pizzaCrusts
+      this.pizzaCrusts += 1;
     }
   }
 }
 
 
-Pizza.prototype.costOfPizza = function (toppings, size) {
-  var pizzaPrice = this.pizzaToppings + this.pizzaSize;
+Pizza.prototype.costOfPizza = function (toppings, size,crusts) {
+  var pizzaPrice = this.pizzaToppings + this.pizzaSize + this.pizzaCrusts;
   return pizzaPrice;
 }
 
@@ -64,6 +64,17 @@ $(document).ready(function(){
                                '</div>' +
                                '<div class="checkbox">' +
                                '<label><input type="checkbox" name="toppings" value="1">Sausage</label>' +
+                               '</div>' +
+                               '<h2>Crust</h2>' +
+                               '<h4>$2 Extra for Each Crust</h4>' +
+                               '<div class="checkbox">' +
+                               '<label> <input type="checkbox" name="crust" value="2">Thin</label>' +
+                               '</div>' +
+                               '<div class="checkbox">' +
+                               '<label> <input type="checkbox" name="crust" value="2">Thick</label>' +
+                               '</div>' +
+                               '<div class="checkbox">' +
+                               '<label> <input type="checkbox" name="crust" value="2">Pan</label>' +
                                '</div>' +
                                '</div>'
     );
