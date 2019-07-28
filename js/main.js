@@ -34,15 +34,21 @@ $(document).ready(function(){
 
   $("#add-more-pizza").click(function(){
     $("#extra-pizzas").append('<p>___________________________________</p>' +
-                              '<h2>Sizes</h2>' +
+                              '<h5>Select Another Pizza</h>' +
                               '<div class="another-pizza">' +
                               '<select class="form-control new-pizza-size">' +
-                               '<option id="size1" value="10">Small - Ksh1000</option>' +
-                               '<option id="size2" value="15">Medium - Ksh1500</option>' +
-                               '<option id="size3" value="20">Large - Ksh2000</option>' +
+                               '<option id="size1" value="1000">Small - Ksh1000</option>' +
+                               '<option id="size2" value="1500">Medium - Ksh1500</option>' +
+                               '<option id="size3" value="2000">Large - Ksh2000</option>' +
                                '</select>' +
-                               '<h2>Toppings</h2>' +
-                               '<h3>Ksh100 extra for each topping</h3>' +
+                               '<h5>Select Pizza Crust</h5>' +
+                               '<select class="form-control new-pizza-crusts">' +
+                                 '<option id="crust1" value="100">Thin-Ksh100</option>' +
+                                 '<option id="crust2" value="150">Thick-Ksh150</option>' +
+                                 '<option id="crust3" value="250">Pan-Ksh200</option>' +
+                               '</select>' +
+                               '<h5>Select Pizza Toppings</h5>' +
+                               '<h6>Extra charges for each topping</h6>' +
                                '<div class="checkbox">' +
                                '<label><input type="checkbox" name="toppings" value="100">Extra Cheese</label>' +
                                '</div>' +
