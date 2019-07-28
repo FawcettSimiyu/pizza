@@ -28,57 +28,48 @@
         <h4>Place Your Order Here</h4>
         <p>We know that everyone has thier own Pizza preferences. Order your special pizza by choosing from the ingredients below.</p>
       </div>
-      <div class="card-body">
-        <form id="orders">
-          <div class="container text-center">
-            <div class="row">
-              <div class="col-md-4">
-                <label for="quantity">Enter Pizza Quantity</label>
-                <input class="form-control"type="number" id="quantity">
-              </div>
-              <div class="col-md-4">
-                <label for="size">Select Pizza Size</label>
-                <select id="pizza-size" class="mdb-select md-form">
-                  <option value="regular">Regular</option>
-                  <option value="medium">Medium</option>
-                  <option value="large">Large</option>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Sizes</h2>
+          <form id="new-pizza-order">
+            <div id="extra-pizzas">
+              <div class="another-pizza">
+                <select class="form-control new-pizza-size">
+                  <option id="size1" value="10">Small - $10</option>
+                  <option id="size2" value="15">Medium - $15</option>
+                  <option id="size3" value="20">Large - $20</option>
                 </select>
-              </div>
-              <div class="col-md-4">
-                <label for="crust">Select Pizza Crust</label>
-                <select class="mdb-select md-form" id="pizza-crust">
-                  <option class="form-control" value="thin">Thin Crust</option>
-                  <option class="form-control" value="thick">Thick Crust</option>
-                  <option class="form-control" value="pan">Pan Crust</option>
-                </select>
-              </div>
-              <div class="col-md-4">
-                <label for="toppings">Select Pizza Toppings</label>
-                <select class="mdb-select md-form" id="pizza-topping">
-                  <option value="margherita">Margherita Pizza</option>
-                  <option value="pepperoni">Pepperoni Pizza</option>
-                  <option value="bbq">BBQ Chicken Pizza</option>
-                </select>
+                <h2>Toppings</h2>
+                <h3>$1 extra for each topping</h3>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="toppings" value="1">Extra Cheese</label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="toppings" value="1">Mushrooms</label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="toppings" value="1">Peppers</label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="toppings" value="1">Sausage</label>
+                </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-6">
-                <label for="deliver">Do you Need Your Pizza Delivered?</label>
-                <select class="mdb-select md-form" id="deliver">
-                  <option value="yes">Yes, Please</option>
-                  <option value="no">No, Please</option>
-                </select>
-              </div>
+            <span class="btn btn-primary" id="add-more-pizza">Add Another Pizza Pie</span>
+            <button type="submit" class="btn btn-info">Place Order</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div id="show-pizza-results">
+            <h2>Your Pizza Order:</h2>
+            <div id="pizza-price">
+              <ul>
+              </ul>
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <button type="submit" id="btn">Checkout Now</button>
-              </div>
-            </div>
+            <h1 id="complete-total"></h1>
           </div>
-        </form>
+        </div>
       </div>
-
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
