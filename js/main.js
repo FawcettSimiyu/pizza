@@ -11,9 +11,9 @@ function Pizza (toppings, size, chosen) {
 }
 
 Pizza.prototype.costOfToppings = function (chosen, toppings) {
-  for (i = 0; i < this.chosenToppings.length; i += 1) {
+  for (i = 0; i < this.chosenToppings.length; i += 100) {
     if (this.chosenToppings[i].checked) {
-      this.pizzaToppings += 1;
+      this.pizzaToppings += 100;
     }
   }
 }
@@ -28,6 +28,7 @@ function resetFields() {
   $('input:checkbox').removeAttr('checked');
 }
 
+var deliveryPrice = parseInt(200);
 // User Interface Logic
 $(document).ready(function(){
 
@@ -36,23 +37,23 @@ $(document).ready(function(){
                               '<h2>Sizes</h2>' +
                               '<div class="another-pizza">' +
                               '<select class="form-control new-pizza-size">' +
-                               '<option id="size1" value="10">Small - $10</option>' +
-                               '<option id="size2" value="15">Medium - $15</option>' +
-                               '<option id="size3" value="20">Large - $20</option>' +
+                               '<option id="size1" value="10">Small - Ksh1000</option>' +
+                               '<option id="size2" value="15">Medium - Ksh1500</option>' +
+                               '<option id="size3" value="20">Large - Ksh2000</option>' +
                                '</select>' +
                                '<h2>Toppings</h2>' +
-                               '<h3>$1 extra for each topping</h3>' +
+                               '<h3>Ksh100 extra for each topping</h3>' +
                                '<div class="checkbox">' +
-                               '<label><input type="checkbox" name="toppings" value="1">Extra Cheese</label>' +
+                               '<label><input type="checkbox" name="toppings" value="100">Extra Cheese</label>' +
                                '</div>' +
                                '<div class="checkbox">' +
-                               '<label><input type="checkbox" name="toppings" value="1">Mushrooms</label>' +
+                               '<label><input type="checkbox" name="toppings" value="100">Mushrooms</label>' +
                                '</div>' +
                                '<div class="checkbox">' +
-                               '<label><input type="checkbox" name="toppings" value="1">Peppers</label>' +
+                               '<label><input type="checkbox" name="toppings" value="100">Peppers</label>' +
                                '</div>' +
                                '<div class="checkbox">' +
-                               '<label><input type="checkbox" name="toppings" value="1">Sausage</label>' +
+                               '<label><input type="checkbox" name="toppings" value="100">Sausage</label>' +
                                '</div>' +
                                '</div>'
     );
@@ -66,8 +67,10 @@ $(document).ready(function(){
 
     $(".another-pizza").each(function() {
       var inputtedPizzaSize = parseInt( $(this).find( $("select.new-pizza-size") ) .val());
-      var inputtedPizzaToppings = 0;
+      var inputtedPizzaToppings = 100;
       var checkedBoxes = $(this).find( document.getElementsByName("toppings") );
+
+
 
       var newPizza = new Pizza(inputtedPizzaToppings, inputtedPizzaSize, checkedBoxes);
 
@@ -79,12 +82,13 @@ $(document).ready(function(){
       console.log(newAllOrders.costTotal);
 
       $("#show-pizza-results").show();
-      $("#pizza-price").append("<li> Pizza " + (pizzaNumber + 1) + ": $" + newPizza.costOfPizza() + "</li>");
+      $("#pizza-price").append("<li> Pizza " + (pizzaNumber + 1) + ": Ksh" + newPizza.costOfPizza() + "</li>");
       overallTotal = overallTotal + newPizza.costOfPizza();
     });
 
-    $("#complete-total").text("Your Total Order is $" + overallTotal);
+    $("#complete-total").text("Your Total Order is Ksh" + overallTotal);
     resetFields();
-
+      prompt("If Delivery Yes, Enter Location and Phone Number");
+      alert("Your order will be delivered to your location soon");
   });
 });
