@@ -17,3 +17,7 @@ Pizza.prototype.costOfToppings = function (chosen, toppings) {
     }
   }
 }
+
+Pizza.prototype.costOfPizza = function (toppings,size){
+  var pizzaPrice = this.pizzaToppings + this.pizzaSize;
+}
