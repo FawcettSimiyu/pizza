@@ -15,71 +15,70 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="banhead1">
-        <div class="logo">
-          <img src="images/logo1.jpg" alt="logo Image" width="150">
-        </div>
-        <h3>Moi Avenue Street, Nairobi Kenya</h3>
-        <h4>+(254)(020)704122060</h4>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-title text-center">
-        <h4>Place Your Order Here</h4>
-        <p>We know that everyone has thier own Pizza preferences. Order your special pizza by choosing from the ingredients below.</p>
+      <div class="jumbotron text-center">
+        <h1>Order Pizza Here</h1>
       </div>
       <div class="row">
         <div class="col-md-6">
-          <h2>Sizes</h2>
-          <form id="new-pizza-order">
-            <div id="extra-pizzas">
-              <div class="another-pizza">
-                <select class="form-control new-pizza-size">
-                  <option id="size1" value="10">Small - $10</option>
-                  <option id="size2" value="15">Medium - $15</option>
-                  <option id="size3" value="20">Large - $20</option>
-                </select>
-                <h2>Toppings</h2>
-                <h4>$1 Extra For Each Topping</h4>
-                <div class="checkbox">
-                  <label><input type="checkbox" name="toppings" value="1">Margherita</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" name="toppings" value="1">Pepperoni</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" name="toppings" value="1">BBQ Chicken</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" name="toppings" value="1">Meat Lover's</label>
-                </div>
-                <h2>Crust</h2>
-                <h4>$2 Extra for Each Crust</h4>
-                <div class="checkbox1">
-                  <label> <input type="checkbox" name="crusts" value="2">Thin</label>
-                </div>
-                <div class="checkbox1">
-                  <label> <input type="checkbox" name="crusts" value="2">Thick</label>
-                </div>
-                <div class="checkbox1">
-                  <label> <input type="checkbox" name="crusts" value="2">Pan</label>
+          <div class="card-body input">
+            <h5>Choose Pizza Size</h5>
+            <form id="new-pizza-order">
+              <div id="extra-pizzas">
+                <div class="another-pizza">
+                  <select class="form-control new-pizza-size">
+                    <option id="size1" value="1000">Small - Ksh1000</option>
+                    <option id="size2" value="1500">Medium - Ksh1500</option>
+                    <option id="size3" value="2000">Large - Ksh2000</option>
+                  </select>
+                  <h5>Select Pizza Crust</h5>
+                  <select class="form-control new-pizza-crusts">
+                    <option id="crust1" value="100">Thin-Ksh100</option>
+                    <option id="crust2" value="150">Thick-Ksh150</option>
+                    <option id="crust3" value="250">Pan-Ksh200</option>
+                  </select>
+                  <h5>Select Pizza Toppings</h5>
+                  <h6>Extra Charges For Each Topping</h6>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="toppings" value="100">Extra Cheese</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="toppings" value="100">Mushrooms</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="toppings" value="100">Peppers</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="toppings" value="100">Sausage</label>
+                  </div>
                 </div>
               </div>
-            </div>
-            <span class="btn btn-primary" id="add-more-pizza">Add Another Pizza Pie</span>
-            <button type="submit" class="btn btn-info">Place Order</button>
-          </form>
-        </div>
-        <div class="col-md-6">
-          <div id="show-pizza-results">
-            <h2>Your Pizza Order:</h2>
-            <div id="pizza-price">
-              <ul>
-              </ul>
-            </div>
-            <h1 id="complete-total"></h1>
+              <h5>Do you Need your Pizza Delivered?</h5>
+              <select class="form-control deliver" name="delivery">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+              <span class="btn btn-primary" id="add-more-pizza">Add Another Pizza Pie</span>
+              <button type="submit" class="btn btn-info">Place Order</button>
+            </form>
           </div>
         </div>
+        <div class="col-md-6">
+          <div class="card-body input1">
+            <div id="show-pizza-results">
+              <h2>Your Pizza Order:</h2>
+              <div id="pizza-price">
+                <ul>
+                </ul>
+              </div>
+              <h1 id="complete-total"></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-center">
+        <h6>Thank You for Ordering Pizza With Us. Please Come Again</h6>
+        <p>Fawcett's Pizza</p>
+        <p>Copyright @2019</p>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

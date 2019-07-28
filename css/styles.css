@@ -29,11 +29,12 @@ ul li:hover{
   background-repeat:no-repeat;
 }
 .banhead1 {
-  height: 200px;
+  height: 100px;
   background-color: grey;
   background-size: cover;
   background-position: center;
   text-align: center;
+  background-image: url("https://assets3.thrillist.com/v1/image/2808392/size/tmg-article_default_mobile.jpg");
 }
 img {
   padding-left: 2px;
@@ -92,6 +93,13 @@ img {
 .new-pizza-size {
   width: 50%;
 }
+.new-pizza-crusts {
+
+  width: 50%;
+}
+.deliver {
+  width: 50%;
+}
 
 #show-pizza-results {
   display: none;
@@ -99,4 +107,17 @@ img {
 
 li {
   font-size: 30px;
+}
+.jumbotron {
+  background-color: #8B81A2;
+  height: 70px;
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/77/70/5557c044f662e9e.jpg");
+}
+.input {
+  border-style: groove;
+  background-image: url("https://previews.123rf.com/images/marco1987/marco19871803/marco1987180300778/97903766-a-pizza-icon-isolated-on-plain-background-.jpg");
+}
+.input1 {
+  border-style: ridge;
+  background-image: url("https://www.conniespizza.com/wp-content/uploads/2015/03/SignupNewsBackground.png");
 }
