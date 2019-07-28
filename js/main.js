@@ -90,8 +90,10 @@ $(document).ready(function(){
       var inputtedPizzaSize = parseInt( $(this).find( $("select.new-pizza-size") ) .val());
       var inputtedPizzaToppings = 0;
       var checkedBoxes = $(this).find( document.getElementsByName("toppings") );
+      var inputtedPizzaCrusts = 0;
+      var checkedBoxes1 = $(this).find(document.getElementsByName("crusts")).
 
-      var newPizza = new Pizza(inputtedPizzaToppings, inputtedPizzaSize, checkedBoxes);
+      var newPizza = new Pizza(inputtedPizzaToppings, inputtedPizzaCrusts, inputtedPizzaSize, checkedBoxes, checkedBoxes1);
 
       newAllOrders.pizzaTotal.push(newPizza);
 
