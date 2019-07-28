@@ -36,12 +36,12 @@ $(document).ready(function(){
                               '<h2>Sizes</h2>' +
                               '<div class="another-pizza">' +
                               '<select class="form-control new-pizza-size">' +
-                               '<option id="size1" value="1000">Small - Ksh1000</option>' +
-                               '<option id="size2" value="1500">Medium - Ksh1500</option>' +
-                               '<option id="size3" value="2000">Large - Ksh2000</option>' +
+                               '<option id="size1" value="10">Small - $10</option>' +
+                               '<option id="size2" value="15">Medium - $15</option>' +
+                               '<option id="size3" value="20">Large - $20</option>' +
                                '</select>' +
                                '<h2>Toppings</h2>' +
-                               '<h3>Extra Charges For Each Topping</h3>' +
+                               '<h3>$1 extra for each topping</h3>' +
                                '<div class="checkbox">' +
                                '<label><input type="checkbox" name="toppings" value="1">Extra Cheese</label>' +
                                '</div>' +
@@ -76,13 +76,14 @@ $(document).ready(function(){
       newPizza.costOfToppings();
 
       var pizzaNumber = newAllOrders.pizzaTotal.indexOf(newPizza);
+      console.log(newAllOrders.costTotal);
 
       $("#show-pizza-results").show();
-      $("#pizza-price").append("<li> Pizza " + (pizzaNumber + 1) + ": Ksh" + newPizza.costOfPizza() + "</li>");
+      $("#pizza-price").append("<li> Pizza " + (pizzaNumber + 1) + ": $" + newPizza.costOfPizza() + "</li>");
       overallTotal = overallTotal + newPizza.costOfPizza();
     });
 
-    $("#complete-total").text("Your Total Order is Ksh" + overallTotal);
+    $("#complete-total").text("Your Total Order is $" + overallTotal);
     resetFields();
 
   });
