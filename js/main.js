@@ -1,30 +1,41 @@
-//Business Logic
-function PizzaOrders (){
+// Business Logic
+function AllOrders () {
   this.pizzaTotal = [];
   this.costTotal = 0;
 }
 
-function Pizza (toppings,size,chosen) {
+function Pizza (toppings, size, chosen,chosen1,crust) {
   this.pizzaToppings = toppings;
   this.pizzaSize = size;
   this.chosenToppings = chosen;
+  this.pizzaCrusts = crusts;
+  this.chosenCrusts = chosen1;
 }
 
 Pizza.prototype.costOfToppings = function (chosen, toppings) {
-  for (i=0; i<this.chosenToppings.length;i+=1){
-    if (this.chosenToppings[i].checked){
+  for (i = 0; i < this.chosenToppings.length; i += 1) {
+    if (this.chosenToppings[i].checked) {
       this.pizzaToppings += 1;
     }
   }
 }
 
-Pizza.prototype.costOfPizza = function (toppings,size){
+Pizza.prototype.costOfCrust = function (chosen1, crust){
+  for (i=0; i<this.chosenCrusts.length; i +=1){
+    if (this.chosenCrusts[i].checked){
+      this.pizzaCrusts
+    }
+  }
+}
+
+
+Pizza.prototype.costOfPizza = function (toppings, size) {
   var pizzaPrice = this.pizzaToppings + this.pizzaSize;
   return pizzaPrice;
 }
 
-function resetFields(){
-  $("select.new-pizza-size").val();
+function resetFields() {
+  $("select.new-pizza-size").val("");
   $('input:checkbox').removeAttr('checked');
 }
 
