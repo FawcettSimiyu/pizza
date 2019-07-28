@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fawcett's Pizza</title>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/mdb.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -27,14 +27,75 @@
           <li>Contact</li>
         </ul>
       </nav>
+
+      <div class="jumbotron text-center">
+        <h1 id="heading">Order Fawcett's Pizza</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card-body input">
+            <form id="new-pizza-order">
+              <div id="extra-pizzas">
+                <div class="another-pizza">
+                  <h5>Select Pizza Size</h5>
+                  <select class="form-control new-pizza-size">
+                    <option id="size1" value="1000">Small - Ksh1000</option>
+                    <option id="size2" value="1500">Medium - Ksh1500</option>
+                    <option id="size3" value="2000">Large - Ksh2000</option>
+                  </select>
+                  <h5>Select Pizza Crust</h5>
+                  <select class="form-control new-pizza-crusts">
+                    <option id="crust1" value="100">Thin-Ksh100</option>
+                    <option id="crust2" value="150">Thick-Ksh150</option>
+                    <option id="crust3" value="250">Pan-Ksh200</option>
+                  </select>
+                  <h5>Select Pizza Toppings</h5>
+                  <h6>Extra Charges For Each Topping</h6>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="toppings" value="100">Extra Cheese</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="toppings" value="100">Mushrooms</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="toppings" value="100">Peppers</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="toppings" value="100">Sausage</label>
+                  </div>
+                </div>
+              </div>
+              <span class="btn btn-primary" id="add-more-pizza">Add Another Pizza Pie</span>
+              <button type="submit" class="btn btn-info">Place Order</button>
+            </form>
+            <h6>Do you need Delivery</h6>
+            <p>
+              <label><input type="radio" name="option" value="yes">Yes</label>
+              <label><input type="radio" name="option" value="no">No</label>
+            </p>
+            <p><input type="button" value="Submit Option"></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-body input1">
+            <div id="show-pizza-results">
+              <h2>Your Pizza Order:</h2>
+              <div id="pizza-price">
+                <ul>
+                </ul>
+              </div>
+              <h1 id="complete-total"></h1>
+            </div>
+          </div>
+        </div>
+      </div>
       <header class="banhead">
         <div class="container h-100">
           <div class="row h-100 align-items-center">
             <div class="col-12 text-center">
-              <h1 id="order"><a href="order.html">Order Now</a></h1>
-              <h1>Tasty and Quality Pizza <br> Since 2019.</h1>
-              <h3>Moi Avenue Street, Nairobi Kenya</h3>
-              <h4>+(254)(020)704122060</h4>
+              <h5>Tasty and Quality Pizza <br> Since 2019.</h5>
+              <h6>Moi Avenue Street, Nairobi Kenya</h6>
+              <h6>+(254)(020)704122060</h6>
             </div>
           </div>
         </div>

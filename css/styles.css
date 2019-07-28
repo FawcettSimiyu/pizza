@@ -9,24 +9,26 @@ nav{
 }
 .logo img {
   float: left;
+  height: 127px;
+
+}
+#heading{
+  color: #E7F3EC;
 }
 ul li {
   display: inline-block;
   padding: 10px;
   font-size: 20px;
   font-family: gothic;
-  background-color: white;
+  color: #E0E62A;
 }
 ul li:hover{
   color: orange;
 }
 .banhead {
-  height: 100vh;
-  min-height: 500px;
-  background-Image:url('https://www.freegreatpicture.com/files/104/14713-hd-pizza-gourmet.jpg');
-  background-size: cover;
+  height: 110px;
   background-position: center;
-  background-repeat:no-repeat;
+  background-color: #3D9970;
 }
 .banhead1 {
   height: 100px;

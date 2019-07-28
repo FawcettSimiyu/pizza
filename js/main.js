@@ -94,7 +94,12 @@ $(document).ready(function(){
 
     $("#complete-total").text("Your Total Order is Ksh" + overallTotal);
     resetFields();
-      prompt("If Delivery Yes, Enter Location and Phone Number");
-      alert("Your order will be delivered to your location soon");
   });
+  $("input[type='button']").click(function(){
+        	var radioValue = $("input[name='option']:checked").val();
+            if(radioValue=="yes"){
+                prompt("Please Enter Delivery Location and Phone Number")
+                alert("Your Order Will be Delivered to Your Location Soon");
+            }
+        });
 });
