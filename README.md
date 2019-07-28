@@ -1,17 +1,17 @@
 # Project Name
 ### Pizza Ordering System Web Application
 ## Project Description
-The project is a cloning a studio website with all assets provided. It requires to cloned site to be the exact replica of the original including the styling and images. Other effects are required to be added using jquery and javascript.
+The project is about creating a web application that allows customers to order different sizes of pizza with one or more toppings. The requirements are to determine pizza prices based on sized, toppings and crust. On checkout, customer should be presented with an order summary form. 
 ## Author Information
 Name: Fawcett Simiyu
 Profession: Student at Moringa School
 ## Setup Instructions
-The web application can be accessed live on github @ https://blackbad1.github.io/delani/
+The web application can be accessed live on github @ 
 ## BDD
 The project is purely front-end and there are no backend requirements based on the instructions.
 The web application uses behaviour driven development techniques.
 ## Technologies Used
-The technologies used in this web application are HTML, CSS and Javascript with its library jQuery. Boostrap was also used as supportive framework to style the pages.
+The technologies used in this web application are HTML, CSS and Javascript with its library jQuery. Boostrap and bootstrap md were also used as supportive framework to style the pages.
 ## Contact Information
 For contact please reach out on facebook:fawcett Eugene. Twitter: @fawcetteugene. LinkedIn:@fawcetteugene or Email:fawcetteugene@gmail.com
 ## License Information
