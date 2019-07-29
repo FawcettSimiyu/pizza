@@ -117,3 +117,15 @@ li {
   border-style: ridge;
   background-image: url("https://www.conniespizza.com/wp-content/uploads/2015/03/SignupNewsBackground.png");
 }
+/*Small Devices*/
+@media (min-width: 576px) {
+
+}
+/*Medium Devices*/
+@media (min-width: 768px) {
+
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}

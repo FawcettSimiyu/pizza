@@ -104,8 +104,9 @@ $(document).ready(function(){
 
       var radioValue = $("input[name='option']:checked").val();
             if(radioValue=="yes"){
-                prompt("Please Enter Delivery Location and Phone Number")
+                prompt("Please Enter Delivery Location and Phone Number.")
                 alert("Thank You. Your Order Will be Delivered to Your Location Soon");
+                alert('Delivery cost is 200Ksh')
             }
 
             if (radioValue=="yes"){
