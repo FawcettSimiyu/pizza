@@ -25,6 +25,7 @@ Pizza.prototype.costOfPizza = function (toppings, size) {
 
 function resetFields() {
   $("select.new-pizza-size").val("");
+  $("select.new-pizza-crusts").val("");
   $('input:checkbox').removeAttr('checked');
 }
 
@@ -89,10 +90,11 @@ $(document).ready(function(){
 
       $("#show-pizza-results").show();
       $("#pizza-price").append("<li> Pizza " + (pizzaNumber + 1) + ": Ksh" + newPizza.costOfPizza() + "</li>");
+
       overallTotal = overallTotal + newPizza.costOfPizza();
     });
 
-    $("#complete-total").text("Your Total Order is Ksh" + overallTotal);
+    $("#complete-total").text("Total Order is Ksh" + overallTotal);
     resetFields();
   });
   $("input[type='button']").click(function(){
@@ -100,6 +102,7 @@ $(document).ready(function(){
             if(radioValue=="yes"){
                 prompt("Please Enter Delivery Location and Phone Number")
                 alert("Your Order Will be Delivered to Your Location Soon");
+                alert("Pay 200Ksh on Delivery")
             }
         });
 });
