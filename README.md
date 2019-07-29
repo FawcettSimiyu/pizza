@@ -6,7 +6,7 @@ The project is about creating a web application that allows customers to order d
 Name: Fawcett Simiyu
 Profession: Student at Moringa School
 ## Setup Instructions
-The web application can be accessed live on github @ 
+The web application can be accessed live on github @ https://blackbad1.github.io/pizza/ 
 ## BDD
 The project is purely front-end and there are no backend requirements based on the instructions.
 The web application uses behaviour driven development techniques.
