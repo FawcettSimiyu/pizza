@@ -1,4 +1,10 @@
 // Business Logic
+var pizzaCrust = {
+  thin : 100,
+  thick: 150,
+  pan : 200
+}
+
 function AllOrders () {
   this.pizzaTotal = [];
   this.costTotal = 0;
@@ -43,11 +49,12 @@ $(document).ready(function(){
                                '<option id="size3" value="2000">Large - Ksh2000</option>' +
                                '</select>' +
                                '<h5>Select Pizza Crust</h5>' +
-                               '<select class="form-control new-pizza-crusts">' +
-                                 '<option id="crust1" value="100">Thin-Ksh100</option>' +
-                                 '<option id="crust2" value="150">Thick-Ksh150</option>' +
-                                 '<option id="crust3" value="250">Pan-Ksh200</option>' +
-                               '</select>' +
+                               '<p>' +
+                                 '<label><input type="radio" name="crust" value="thin">Thin</label>' +
+                                 '<label><input type="radio" name="crust" value="thick">Thick</label>' +
+                                 '<label><input type="radio" name="crust" value="pan">Pan</label>' +
+                               '</p>' +
+                               '<p id="btn"><input type="button" value="Submit Option"></p>' +
                                '<h5>Select Pizza Toppings</h5>' +
                                '<h6>Extra charges for each topping</h6>' +
                                '<div class="checkbox">' +
