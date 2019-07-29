@@ -41,36 +41,34 @@ $(document).ready(function(){
 
   $("#add-more-pizza").click(function(){
     $("#extra-pizzas").append('<p>___________________________________</p>' +
-                              '<h5>Select Another Pizza</h>' +
                               '<div class="another-pizza">' +
+                              '<h6>Select Pizza Size</h6>' +
                               '<select class="form-control new-pizza-size">' +
-                               '<option id="size1" value="1000">Small - Ksh1000</option>' +
+                               '<option id="size1" value="1000">Regular - Ksh1000</option>' +
                                '<option id="size2" value="1500">Medium - Ksh1500</option>' +
                                '<option id="size3" value="2000">Large - Ksh2000</option>' +
                                '</select>' +
-                               '<h5>Select Pizza Crust</h5>' +
+                               '<h6>Select Pizza Crust</h6>' +
                                '<p>' +
                                  '<label><input type="radio" name="crust" value="thin">Thin</label>' +
                                  '<label><input type="radio" name="crust" value="thick">Thick</label>' +
                                  '<label><input type="radio" name="crust" value="pan">Pan</label>' +
                                '</p>' +
-                               '<p id="btn"><input type="button" value="Submit Option"></p>' +
-                               '<h5>Select Pizza Toppings</h5>' +
+                               '<h6>Select Pizza Toppings</h6>' +
                                '<h6>Extra charges for each topping</h6>' +
                                '<div class="checkbox">' +
-                               '<label><input type="checkbox" name="toppings" value="100">Extra Cheese</label>' +
+                               '<label><input type="checkbox" name="toppings" value="100">Peperroni</label>' +
                                '</div>' +
                                '<div class="checkbox">' +
-                               '<label><input type="checkbox" name="toppings" value="100">Mushrooms</label>' +
+                               '<label><input type="checkbox" name="toppings" value="100">Bacon</label>' +
                                '</div>' +
                                '<div class="checkbox">' +
-                               '<label><input type="checkbox" name="toppings" value="100">Peppers</label>' +
+                               '<label><input type="checkbox" name="toppings" value="100">Green Peppers</label>' +
                                '</div>' +
                                '<div class="checkbox">' +
                                '<label><input type="checkbox" name="toppings" value="100">Sausage</label>' +
                                '</div>' +
                              '</div>'
-
     );
   });
 
@@ -107,28 +105,22 @@ $(document).ready(function(){
       var radioValue = $("input[name='option']:checked").val();
             if(radioValue=="yes"){
                 prompt("Please Enter Delivery Location and Phone Number")
-                alert("Your Order Will be Delivered to Your Location Soon");
-                alert("Pay 200Ksh on Delivery")
+                alert("Thank You. Your Order Will be Delivered to Your Location Soon");
             }
+
             if (radioValue=="yes"){
               var deliveryPrice = parseInt(200);
             } else {
               deliveryPrice = 0;
             }
 
-
       $("#show-pizza-results").show();
-      $("#pizza-price").append("<li> Pizza " + (pizzaNumber + 1) + ": Ksh" + newPizza.costOfPizza()  + "(Pizza & Toppings)"+ "</li>");
-
-
+      $("#pizza-price").append("<li> Pizza " + (pizzaNumber + 1) + ": Ksh" + newPizza.costOfPizza()  + "(Pizza & Toppings Only)"+ "</li>");
 
       overallTotal = overallTotal + newPizza.costOfPizza() + selectedCrust + deliveryPrice;
     });
 
-    $("#complete-total").text("Total Order inclusive delivery: Ksh" + overallTotal);
+    $("#complete-total").text("Total Order Amount inclusive All Costs: Ksh" + overallTotal);
     resetFields();
   });
-
-
-
 });
