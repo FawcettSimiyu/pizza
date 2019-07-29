@@ -12,6 +12,12 @@ nav{
   height: 127px;
 
 }
+#crust1{
+  font-family: gothic;
+  border-style: inset;
+  width: 50%;
+  font-weight: bold;
+}
 #heading{
   color: #E7F3EC;
   text-align: center;

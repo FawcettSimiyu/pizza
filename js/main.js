@@ -17,7 +17,7 @@ function Pizza (toppings, size, chosen) {
 }
 
 Pizza.prototype.costOfToppings = function (chosen, toppings) {
-  for (i = 0; i < this.chosenToppings.length; i += 100) {
+  for (i = 0; i < this.chosenToppings.length; i += 1) {
     if (this.chosenToppings[i].checked) {
       this.pizzaToppings += 100;
     }
@@ -25,17 +25,17 @@ Pizza.prototype.costOfToppings = function (chosen, toppings) {
 }
 
 Pizza.prototype.costOfPizza = function (toppings, size) {
-  var pizzaPrice = this.pizzaToppings + this.pizzaSize;
+  var pizzaPrice = this.pizzaToppings + this.pizzaSize ;
   return pizzaPrice;
 }
 
 function resetFields() {
   $("select.new-pizza-size").val("");
-  $("select.new-pizza-crusts").val("");
+  $("input[name='crust']:checked").val();
+  $("input[name='option']:checked").val();
   $('input:checkbox').removeAttr('checked');
 }
 
-var deliveryPrice = parseInt(200);
 // User Interface Logic
 $(document).ready(function(){
 
@@ -69,7 +69,8 @@ $(document).ready(function(){
                                '<div class="checkbox">' +
                                '<label><input type="checkbox" name="toppings" value="100">Sausage</label>' +
                                '</div>' +
-                               '</div>'
+                             '</div>'
+
     );
   });
 
@@ -80,10 +81,9 @@ $(document).ready(function(){
     var overallTotal = newAllOrders.costTotal;
 
     $(".another-pizza").each(function() {
-      var inputtedPizzaSize = parseInt( $(this).find( $("select.new-pizza-size") ) .val());
-      var inputtedPizzaToppings = 100;
-      var checkedBoxes = $(this).find( document.getElementsByName("toppings") );
-
+      var inputtedPizzaSize = parseInt( $(this).find( $("select.new-pizza-size")).val());
+      var inputtedPizzaToppings = 0;
+      var checkedBoxes = $(this).find( document.getElementsByName("toppings"));
 
 
       var newPizza = new Pizza(inputtedPizzaToppings, inputtedPizzaSize, checkedBoxes);
@@ -95,21 +95,40 @@ $(document).ready(function(){
       var pizzaNumber = newAllOrders.pizzaTotal.indexOf(newPizza);
       console.log(newAllOrders.costTotal);
 
-      $("#show-pizza-results").show();
-      $("#pizza-price").append("<li> Pizza " + (pizzaNumber + 1) + ": Ksh" + newPizza.costOfPizza() + "</li>");
+      var radioValue1 = $("input[name='crust']:checked").val();
+          if(radioValue1 =="thin"){
+              var selectedCrust = parseInt(pizzaCrust.thin);
+            } else if (radioValue1=="thick") {
+              var selectedCrust = parseInt(pizzaCrust.thick);
+            } else {
+              var selectedCrust = parseInt(pizzaCrust.pan);
+            }
 
-      overallTotal = overallTotal + newPizza.costOfPizza();
-    });
-
-    $("#complete-total").text("Total Order is Ksh" + overallTotal);
-    resetFields();
-  });
-  $("input[type='button']").click(function(){
-        	var radioValue = $("input[name='option']:checked").val();
+      var radioValue = $("input[name='option']:checked").val();
             if(radioValue=="yes"){
                 prompt("Please Enter Delivery Location and Phone Number")
                 alert("Your Order Will be Delivered to Your Location Soon");
                 alert("Pay 200Ksh on Delivery")
             }
-        });
+            if (radioValue=="yes"){
+              var deliveryPrice = parseInt(200);
+            } else {
+              deliveryPrice = 0;
+            }
+
+
+      $("#show-pizza-results").show();
+      $("#pizza-price").append("<li> Pizza " + (pizzaNumber + 1) + ": Ksh" + newPizza.costOfPizza()  + "(Pizza & Toppings)"+ "</li>");
+
+
+
+      overallTotal = overallTotal + newPizza.costOfPizza() + selectedCrust + deliveryPrice;
+    });
+
+    $("#complete-total").text("Total Order inclusive delivery: Ksh" + overallTotal);
+    resetFields();
+  });
+
+
+
 });
